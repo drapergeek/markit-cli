@@ -2,8 +2,9 @@
   {{#link-to 'bookmarks.new' class='new-bookmark'}}
     New Bookmark
   {{/link-to}}
+
   <ol>
-    {{#each itemController='bookmark'}}
+    {{#each}}
       <li>
         {{#link-to 'bookmarks.bookmark' this}}
           {{favicon-image url=url}} {{domain}}
