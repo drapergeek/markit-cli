@@ -1,0 +1,19 @@
+<nav class="sidebar">
+  {{#link-to 'bookmarks.new' class='new-bookmark'}}
+    New Bookmark
+  {{/link-to}}
+  <ol>
+    {{#each itemController='bookmark'}}
+      <li>
+        {{#link-to 'bookmarks.bookmark' this}}
+          {{favicon-image url=url}} {{domain}}
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ol>
+</nav>
+<main>
+  <article class="bookmark-show">
+    {{outlet}}
+  </article>
+</main>
